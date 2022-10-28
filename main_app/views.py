@@ -8,8 +8,26 @@ class Home(TemplateView):
 class About(TemplateView):
     template_name = "about.html"
 
-class Projects(TemplateView):
-    template_name = "projects.html"
+class Project:
+    def __init__(self, name, image, tool, description):
+        self.name = name
+        self.image = image
+        self.tool = tool
+        self.description = description
+
+projects = [
+    Project("Most recent Project", 
+    "https://github.com/Tiranoe/adventureTime/blob/main/assets/adventuretimegif.gif?raw=true", 
+    "Python, Django", 
+    "Community Applications for travelers to share their unique experiences"),
+]
+
+class ProjectList(TemplateView):
+    template_name = "project_list.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["projects"] = projects
+        return context
 
 class Contact(TemplateView):
     template_name = "contact.html"
