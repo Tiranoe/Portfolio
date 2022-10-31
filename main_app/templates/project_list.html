@@ -6,21 +6,18 @@
 <h1 class="title pt-5">Projects</h1>
 <div class="gallery">
   {% for project in projects %}
-  <a href="">
+  <a href="{% url 'project_detail' project.pk %}">
     <div class="card">
       <div class="card-image">
-        <figure class="image">
-          <img src="{{project.image}}" alt="{{project.name}}" />
+        <figure class="image is-square">
+          <img src="{{project.img}}" alt="{{project.name}}" />
         </figure>
+      </div>
+      <div class="card-header">
+        <p class="card-header-title">{{project.name}}</p>
       </div>
     </div>
   </a>
-	{% empty %}
-  <article class="message">
-    <div class="message-header">
-      <p>No project Available</p>
-    </div>
-  </article>
   {% endfor %}
 </div>
 {% endblock %}
