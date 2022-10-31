@@ -9,18 +9,9 @@ class Home(TemplateView):
 class About(TemplateView):
     template_name = "about.html"
 
-class Project:
-    def __init__(self, name, image, tool, description, github, live):
-        self.name = name
-        self.image = image
-        self.tool = tool
-        self.description = description
-        self.github = github
-        self.live = live
-
 class ProjectList(TemplateView):
     template_name = "project_list.html"
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["projects"] = Project.objects.all()

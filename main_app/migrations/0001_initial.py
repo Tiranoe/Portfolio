@@ -12,12 +12,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Artist',
+            name='Project',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('img', models.CharField(max_length=250)),
-                ('tools', models.CharField(max_length=200)),
+                ('tool', models.CharField(max_length=200)),
                 ('description', models.CharField(max_length=500)),
                 ('github', models.CharField(max_length=250)),
                 ('live', models.CharField(max_length=250)),
