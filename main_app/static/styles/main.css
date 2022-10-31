@@ -10,15 +10,21 @@ h3 {
     color: #ffffff;
 }
 
+.container {
+    padding: 40px;
+    padding-right: 0;
+  }
+
 .title {
     color: #ffffff;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
-    gap: 30px;
+    row-gap: 70px;
 }
 
 .gallery .card {
