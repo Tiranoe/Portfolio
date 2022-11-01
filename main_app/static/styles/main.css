@@ -21,8 +21,8 @@ h3 {
 
 .gallery {
     display: grid;
-    grid-template-columns: 80%;
-    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
     row-gap: 70px;
 }
@@ -46,7 +46,6 @@ p {
     width: 100%;
     height: 500px;
     background-color: #ffffff;
-    overflow: hidden;
 }
 
 .detail__img::after {
