@@ -21,8 +21,8 @@ h3 {
 
 .gallery {
     display: grid;
-    grid-template-rows: 50%;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
     row-gap: 70px;
 }
