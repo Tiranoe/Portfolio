@@ -1,4 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Insert short introduction here</h1>
+<h1 class="title pt-5">Hello, My Name is John!</h1>
+
+<h1>I am a Software Engineer with a background in Applied Mathematics and experience within the healthcare and IT industry. </h1>
+<h1>My interests generally lie in the areas of Backend Development and Full Stack Development. </h1>
+<h1>I enjoy the process of problem-solving and love learning about the underlying algorithmic solutions! </h1>
+<h1>My favorite language is in python and sometimes JavaScript.</h1>
+</br>
+
+
+<h1 class ="title pt-4"> Projects </h1>
+<div class="introProjects">
+  {% for project in projects %}
+  <a href="{% url 'project_detail' project.pk %}">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-square">
+          <img src="{{project.img}}" alt="{{project.name}}" />
+        </figure>
+      </div>
+      <div class="card-header">
+        <p class="card-header-title">{{project.name}} - {{project.tool}}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+</div>
 {% endblock %}

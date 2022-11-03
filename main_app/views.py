@@ -7,6 +7,10 @@ from django.views.generic import DetailView
 
 class Home(TemplateView):
     template_name = "home.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["projects"] = Project.objects.all()
+        return context
 
 class About(TemplateView):
     template_name = "about.html"

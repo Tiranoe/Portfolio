@@ -36,6 +36,14 @@ h3 {
     z-index: 10;
 }
 
+.introProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
 p {
     font-size: 12px;
 }
