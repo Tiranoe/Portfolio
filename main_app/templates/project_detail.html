@@ -7,17 +7,21 @@
     <h1 class="title">{{project.name}}</h1>
 </div>
 <div class="detail__container">
-    <div class="buttons">
-        <a href="{{project.github}}" class="button">
+    <div class="live_links">
+        <a href="{{project.github}}" class="btn btn-secondary btn-lg">
             <span class="icon">
-                <i class="fa-brands fa-square-github"></i>
+                <i class="fa-brands fa-square-github fa-3x"></i>
+            </span>
+        </br>
+        </br>
+        </a>
+        <a href="{{project.live}}" class="btn btn-secondary btn-lg">
+            <span class="icon">
+                <i class="fa-solid fa-globe fa-3x"></i>           
             </span>
         </a>
-        <a href="{{project.live}}" class="button">
-            <span class="icon">
-                <i class="fa-solid fa-globe"></i>            </span>
-        </a>
     </div>
+</br>
     <div class="detail__about">
         <h4 class="title is-4">About</h4>
         <p>{{project.tool}}</p>

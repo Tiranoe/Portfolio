@@ -83,3 +83,10 @@ img {
 .detail__container {
     margin-top: 500px;
 }
+
+.live_links{
+    position: absolute;
+    z-index: 5;
+    top: 350px;
+    right: 40px;
+}
