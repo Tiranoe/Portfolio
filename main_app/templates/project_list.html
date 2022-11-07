@@ -16,18 +16,19 @@
       <div class="card-header">
         <h2 class="card-header-title">{{project.name}}</p>
       </div>
-    </div>
-    <div class="card-body-center">
-      <a href="{{project.github}}">
-        <span class="icon">
-          <i class="fa-brands fa-square-github fa-4x"></i>
-        </span>
-      </a>
-      <a href="{{project.live}}">
-        <span class="icon">
-          <i class="fa-solid fa-globe fa-4x"></i>           
-        </span>
-      </a>
+      <div class="live_link">
+        <a href="{{project.github}}">
+          <span class="icon">
+            <i class="fa-brands fa-square-github fa-4x"></i>
+          </span>
+        </a>
+        </br></br></br></br>
+        <a href="{{project.live}}">
+          <span class="icon">
+            <i class="fa-solid fa-globe fa-4x"></i>           
+          </span>
+        </a>
+      </div>
     </div>
   </a>
   {% endfor %}
