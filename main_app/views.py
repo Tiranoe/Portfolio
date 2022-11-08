@@ -3,7 +3,7 @@ from django.views import View
 from django.views.generic.base import TemplateView
 from .models import Project
 from django.views.generic import DetailView
-
+from .forms import ContactForm
 
 class Home(TemplateView):
     template_name = "home.html"
@@ -29,3 +29,8 @@ class ProjectDetail(DetailView):
 
 class Contact(TemplateView):
     template_name = "contact.html"
+
+def contact_view(request):
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact/contact.html', context)
