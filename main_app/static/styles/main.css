@@ -1,12 +1,25 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
-    min-height: 100vh;
+  height: 100%;
+
+  background: 
+    radial-gradient(circle at bottom, white, transparent 80%),    
+    linear-gradient(to top, blue 0%, transparent 70%),    
+    linear-gradient(to bottom, transparent, rgba(white, 0.4) 70%),
+    blue;  
+  animation: bg 30s infinite;
+}
+
+@keyframes bg {
+  0%, 100% { background-color: black; }
+  25% { background-color: grey; }
+  50% { background-color: darkblue; }
+  75% { background-color: midnightblue; }
 }
 
 h1,
 h2,
-h3 {
+h3,
+label {
     color: #ffffff;
 }
 
